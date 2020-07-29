@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/adrian154/jigsaw/issues"
   },
-  "homepage": "https://github.com/adrian154/jigsaw#readme"
+  "homepage": "https://github.com/adrian154/jigsaw#readme",
+  "dependencies": {
+    "better-sqlite3": "^7.1.0",
+    "express": "^4.17.1"
+  }
 }
