@@ -50,7 +50,8 @@ CREATE TABLE solutions (
 CREATE TABLE sessions (
     IP TEXT,
     key TEXT UNIQUE,
-    userID INTEGER
+    userID INTEGER,
+    UNIQUE(IP, userID)
 );
 
 CREATE TABLE votes (

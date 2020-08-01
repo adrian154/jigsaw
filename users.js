@@ -1,6 +1,4 @@
 // Module that accesses the database to retrieve user information.
-const user = require("./user.js");
-
 const Users = function(db) {
     
     this.db = db;
@@ -19,7 +17,6 @@ const Users = function(db) {
 
     this.getUsersWhere = function(SQLCondition, bindParams) {
         let query = `SELECT * FROM users WHERE ${SQLCondition}`;
-        console.log(query);
         return db.prepare(query).all(bindParams);
     };
 
