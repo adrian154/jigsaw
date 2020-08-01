@@ -36,6 +36,10 @@ const Users = function(db) {
     this.getUserByName = function(name) {
         return this.getUserWhere("name = @name", {name: name});
     };
+    
+    this.getUserByEmail = function(email) {
+        return this.getUserWhere("email = @email", {email: email});
+    };
 
     this.deleteUser = function(user) {
         db.run("DELETE FROM users WHERE userID = @userID").run({

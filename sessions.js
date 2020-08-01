@@ -1,3 +1,11 @@
+const Session = require("./session.js");
+const crypto = require("crypto");
+const config = require("./config.js");
+
+const genSessionKey = function() {
+    return crypto.randomBytes(config.SESSION_KEYLEN).toString("hex");
+};
+
 // Module that accesses the database
 const Sessions = function(db) {
 
@@ -10,6 +18,10 @@ const Sessions = function(db) {
             userID: session.ownerID
         });
         return this.getSessionByROWID(info.lastInsertRowid);
+    };
+
+    this.createSession = function(ip, userID) {
+        return this.addOrUpdateSession(new Session(ip, genSessionKey(), userID));
     };
 
     this.getSessionsWhere = function(SQLCondition, bindParams) {
@@ -37,3 +49,5 @@ const Sessions = function(db) {
     };
 
 };
+
+module.exports = Sessions;
