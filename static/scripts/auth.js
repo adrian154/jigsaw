@@ -28,3 +28,4 @@ const authUser = function(email, password) {
         }));
     });
 };
+
