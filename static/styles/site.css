@@ -13,6 +13,38 @@ body, html {
 
 #header {
     width: 100%;
+    background-color: #333333;
+}
+
+#header button {
+
+    background-color: inherit;
+    color: #ffffff;
+    float: left;
+    
+    /* Get rid of default styles */
+    border: none;
+    outline: none;
+    padding: 0.6em 0.6em;
+    font-size: 14pt;
+
+    transition: 0.3s;
+
+}
+#header button:hover {
+    background-color: #cccccc;
+    color: #000000;
+}
+
+#headerLogo {
+    background-color: #4dc9ff;
+    width: 100%;
+}
+#headerLogo img {
+    display: block;
+    width: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #body {
