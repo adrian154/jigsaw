@@ -6,21 +6,17 @@
     <body>
         
         <div id="content">
-            <div id="header">
-                <div id="headerLogo">
-                    <img src="/static/images/logo.png">
-                </div>
-                <button>Home</button>
-                <button>Other</button>
-                <button>Stupid</button>
-            </div>
 
-            <div id="signInArea" class="textCenter">
-                <h1>Sign In</h1>
-                <form>
+            <div id="signInContainer">
+                <img src="/static/images/logo_transparent_gray.png" style="width: 50%;">
+                <form id="signInArea">
+                    <span><b>Email</b></span>
                     <input type="text" placeholder="Email..." id="fieldUsername"><br>
+
+                    <span><b>Password</b></span>
                     <input type="password" placeholder="Password..." id="fieldPassword"><br>
-                    <button id="signInButton">Sign In</button>
+
+                    <button id="signInButton"><b>Sign In</b></button>
                 </form>
             </div>
 
