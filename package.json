@@ -18,6 +18,7 @@
   "homepage": "https://github.com/adrian154/jigsaw#readme",
   "dependencies": {
     "better-sqlite3": "^7.1.0",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1"
   }
 }

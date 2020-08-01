@@ -21,7 +21,7 @@ DROP TABLE IF EXISTS votes;
 DROP TABLE IF EXISTS comments;
 
 CREATE TABLE users (
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY UNIQUE,
     username TEXT,
     passwordHash TEXT,
     email TEXT,
@@ -31,7 +31,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE challenges (
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY UNIQUE,
     title TEXT,
     description TEXT,
     createDate INTEGER,
@@ -40,7 +40,7 @@ CREATE TABLE challenges (
 );
 
 CREATE TABLE solutions (
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY UNIQUE,
     code TEXT,
     createDate INTEGER,
     creatorID INTEGER,
@@ -49,7 +49,7 @@ CREATE TABLE solutions (
 
 CREATE TABLE sessions (
     IP TEXT,
-    key TEXT,
+    key TEXT UNIQUE,
     userID INTEGER
 );
 
@@ -62,7 +62,7 @@ CREATE TABLE votes (
 );
 
 CREATE TABLE comments (
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY UNIQUE,
     body TEXT,
     createDate INTEGER,
     creatorID INTEGER,
