@@ -3,7 +3,8 @@ const express = require("express");
 const sqlite = require("better-sqlite3");
 const cookieParser = require("cookie-parser");
 
-const routeAuth = require("./routes/routeAuth.js")
+const routeAuth = require("./routes/auth.js");
+const routeSignin = require("./routes/signin.js");
 
 // Local dependencies
 const config = require("./config.js");
@@ -26,6 +27,8 @@ module.exports = function() {
 
     // Add routes
     this.app.post("/auth", (req, res) => routeAuth(this, req, res));
+    
+    this.app.get("/signin", (req, res) => routeSignin(this, req, res));
 
     // Special 500 route (must be last)
     this.app.use((err, req, res, next) => {

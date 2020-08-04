@@ -26,8 +26,9 @@
 }
 
 #signInArea input[type=text], input[type=password] {
-    width: 100%;
     
+    width: 90%;
+
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 0.8em;
