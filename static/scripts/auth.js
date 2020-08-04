@@ -29,3 +29,20 @@ const authUser = function(email, password) {
     });
 };
 
+const signin = function(event) {
+
+    event.preventDefault();
+
+    let email = document.getElementById("fieldEmail").value;
+    let password = document.getElementById("fieldPassword").value;
+
+    authUser(email, password)
+        .then((key) => {
+            console.log(key);
+        }).catch((message) => {
+            document.getElementById("message").innerHTML = message;
+        });
+
+};
+
+document.getElementById("signInArea").addEventListener("submit", signin);

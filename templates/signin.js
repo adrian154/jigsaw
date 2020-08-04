@@ -10,16 +10,19 @@ module.exports = function() {
     <img src="/static/images/logo_transparent_gray.png" style="width: 50%;">
     <form id="signInArea">
 
+        <p id="message"></p>
+
         <span><b>Email</b></span>
-        <input type="text" placeholder="Email..." id="fieldUsername"><br>
+        <input type="text" placeholder="Email..." id="fieldEmail"><br>
 
         <span><b>Password</b></span>
         <input type="password" placeholder="Password..." id="fieldPassword"><br>
 
         <p><a href="#">Forgot password?</a></p>
 
-        <button id="signInButton"><b>Sign In</b></button>
+        <button id="signInButton" type="submit"><b>Sign In</b></button>
     </form>
+    <script type="text/javascript" src="/static/scripts/auth.js"></script>
 </div>
             `;
         }
