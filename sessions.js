@@ -26,7 +26,11 @@ const Sessions = function(db) {
 
     this.getSessionsWhere = function(SQLCondition, bindParams) {
         let query = `SELECT * FROM sessions WHERE ${SQLCondition}`;
-        return db.prepare(query).all(bindParams);
+        return db.prepare(query).all(bindParams).map((result) => new Session(
+            result.ip,
+            result.key,
+            result.userID
+        ));
     };
 
     this.getSessionWhere = function(SQLCondition, bindParams) {

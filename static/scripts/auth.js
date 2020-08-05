@@ -38,7 +38,11 @@ const signin = function(event) {
 
     authUser(email, password)
         .then((key) => {
-            console.log(key);
+            
+            // Store cookie, redirect
+            document.cookie = `key=${key}`;
+            window.location.href = "/dashboard";
+
         }).catch((message) => {
             document.getElementById("message").innerHTML = message;
         });
