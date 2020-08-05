@@ -18,13 +18,11 @@ module.exports = function(app, req, res) {
         let session = app.sessions.getSessionByKey(req.cookies.key);
         if(session === null) {
             // The user's session is invalid. Clear it.
-            console.log("DEBUG: invalid session (key sent but not found)")
+            console.log("DEBUG: invalid session (key sent but not found)");
             res.clearCookie("key");
             sendSigninPage(res);
             return;
         }
-
-        console.log(session);
 
         let user = app.users.getUserByID(session.ownerID);
         if(user === null) {

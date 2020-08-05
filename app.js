@@ -5,11 +5,14 @@ const cookieParser = require("cookie-parser");
 
 const routeAuth = require("./routes/auth.js");
 const routeSignin = require("./routes/signin.js");
+const routeDashboard = require("./routes/dashboard.js");
+const routeViewChallenge = require("./routes/viewchallenge.js");
 
 // Local dependencies
 const config = require("./config.js");
 const Users = require("./users.js");
 const Sessions = require("./sessions.js");
+const Challenges = require("./challenges.js");
 
 module.exports = function() {
 
@@ -19,16 +22,20 @@ module.exports = function() {
 
     this.users = new Users(this.db);
     this.sessions = new Sessions(this.db);
+    this.challenges = new Challenges(this.db);
 
     // Middleware...
     this.app.use(cookieParser());
     this.app.use(express.json());
     this.app.use("/static", express.static("static"));
 
-    // Add routes
+    // Add routes (POST)
     this.app.post("/auth", (req, res) => routeAuth(this, req, res));
     
+    // Add routes (GET)
     this.app.get("/signin", (req, res) => routeSignin(this, req, res));
+    this.app.get("/dashboard", (req, res) => routeDashboard(this, req, res));
+    this.app.get("/challenges/:challengeID", (req, res) => routeViewChallenge(this, req, res));
 
     // Special 500 route (must be last)
     this.app.use((err, req, res, next) => {
