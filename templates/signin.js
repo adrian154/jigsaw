@@ -7,7 +7,7 @@ module.exports = function() {
         function() {
             return `
 <div id="signInContainer">
-    <img src="/static/images/logo_transparent_gray.png" style="width: 50%;">
+    <img src="/static/images/logo_dark_on_light.png" style="width: 50%;">
     <form id="signInArea">
 
         <p id="message"></p>

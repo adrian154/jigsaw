@@ -48,6 +48,7 @@ module.exports = function() {
     this.app.get("/challenges/:challengeID", (req, res) => routeViewChallenge(this, req, res));
     this.app.get("/profiles/:userID", (req, res) => routeViewProfile(this, req, res));
 
+    // Debug routes
     this.app.get("/bogus", (req, res) => bogus.bogus = 42);
 
     // Special 500 route (must be last)

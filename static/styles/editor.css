@@ -1,4 +1,39 @@
 #editorArea {
     width: 100%;
     flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#leftPane {
+    flex-basis: 22%;
+    
+    background-color: #f2f2f2;
+    padding: 2em;
+}
+
+#rightPane {
+    flex-basis: 77%;
+}
+
+#innerRightContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#topEditor {
+    flex-basis: 66%;
+}
+
+#bottomOutput {
+    flex-basis: 33%;
+}
+
+.CodeMirror {
+    width: 100%;
+    height: inherit !important;
 }
