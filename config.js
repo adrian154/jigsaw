@@ -2,6 +2,8 @@ const DATABASE_FILE = "dev_db.db";
 
 const PORT = 80;
 
+const PRODUCTION = false;
+
 // Settings for password hashing.
 const PHASH_SALT_SIZE = 128;
 const PHASH_ITERATIONS = 2048;
@@ -10,6 +12,8 @@ const PHASH_DIGEST = "sha512";
 
 const SESSION_KEYLEN = 64;
 
+const ADMIN_EMAIL = "crocodilecoding@gmail.com";
+
 module.exports = {
     DATABASE_FILE: DATABASE_FILE,
     PORT: PORT,
@@ -17,5 +21,7 @@ module.exports = {
     PHASH_ITERATIONS: PHASH_ITERATIONS,
     PHASH_KEYLEN: PHASH_KEYLEN,
     PHASH_DIGEST: PHASH_DIGEST,
-    SESSION_KEYLEN: SESSION_KEYLEN
+    SESSION_KEYLEN: SESSION_KEYLEN,
+    PRODUCTION: PRODUCTION,
+    ADMIN_EMAIL: ADMIN_EMAIL
 };
