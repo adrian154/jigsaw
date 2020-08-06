@@ -32,10 +32,16 @@
 
 #bottomOutput {
     flex-basis: 40%;
-    overflow: auto;
-
+    overflow: hidden;
+    
     background-color: #000000;
     color: #ffffff;
+}
+
+#bottomInner {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 
 #tabResults, #tabConsole {
