@@ -31,8 +31,8 @@
                     <div id="bottomOutput">
                         <div id="selector">
                             <button class="headerButton" id="runButton" onclick="run()">&#9654; Run</button>
-                            <button class="headerButton">Results</button>
-                            <button class="headerButton">Console</button>
+                            <button class="headerButton" id="resultsButton" onclick="showResultsTab()" style="background-color: #888888;">Results</button>
+                            <button class="headerButton" id="consoleButton" onclick="showConsoleTab()">Console</button>
                         </div>
                         <div id="bottomInner">
                             <div id="tabResults">
@@ -53,7 +53,7 @@
             let challengeName = "add";
             let challengeID = 1000;
             let challengeTestCasesJSON = "[{\"params\":[5,10],\"returnValue\":15},{\"params\":[-2,8],\"returnValue\":6},{\"params\":[-1,-2],\"returnValue\":-3},{\"params\":[17,38],\"returnValue\":55},{\"params\":[0,0],\"returnValue\":0}]";
-       </script>
+        </script>
 
         <script src="/static/scripts/editor.js"></script>
 

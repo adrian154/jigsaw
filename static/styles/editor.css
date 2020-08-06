@@ -33,7 +33,7 @@
 #bottomOutput {
     flex-basis: 40%;
     overflow: hidden;
-    
+
     background-color: #000000;
     color: #ffffff;
 }
@@ -46,6 +46,14 @@
 
 #tabResults, #tabConsole {
     min-height: min-content;
+}
+
+#tabResults {
+
+}
+
+#tabConsole {
+    display: none;
 }
 
 #selector {
@@ -64,6 +72,10 @@
 }
 #runButton:hover {
     color: #ffffff;
+}
+#runButton:disabled {
+    background-color: #555555;
+    cursor: not-allowed;
 }
 
 table, td {
