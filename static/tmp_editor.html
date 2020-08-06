@@ -13,12 +13,10 @@
         
         <div id="content">
             <div id="header">
-                <div id="headerLogo">
-                    <img src="/static/images/logo_light_on_dark.png">
-                </div>
-                <button>Home</button>
-                <button>Other</button>
-                <button>Stupid</button>
+                <img src="/static/images/logo_light_on_dark.png">
+                <button class="headerButton">Home</button>
+                <button class="headerButton">Other</button>
+                <button class="headerButton">Stupid</button>
             </div>
 
             <div id="editorArea">
@@ -28,7 +26,19 @@
                 </div>
                 <div id="rightPane">
                     <div id="topEditor"></div>
-                    <div id="bottomOutput"></div>
+                    <div id="bottomOutput">
+                        <div id="selector">
+                            <button class="headerButton" id="runButton">&#9654; Run</button>
+                            <button class="headerButton">Results</button>
+                            <button class="headerButton">Console</button>
+                            </div>
+                        <div id="tabResults">
+
+                        </div>
+                        <div id="tabConsole">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

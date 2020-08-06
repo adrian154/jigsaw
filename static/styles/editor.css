@@ -9,7 +9,7 @@
 #leftPane {
     flex-basis: 22%;
     
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     padding: 2em;
 }
 
@@ -20,14 +20,30 @@
 }
 
 #topEditor {
-    flex-basis: 66%;
+    flex-basis: 66.66%;
 }
 
 #bottomOutput {
-    flex-basis: 33%;
+    flex-basis: 33.33%;
+
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#selector {
+    display: inline-block;
+    width: 100%;
+    background-color: #333333;
 }
 
 .CodeMirror {
     width: 100%;
     height: inherit !important;
+}
+
+#runButton {
+    background-color: #ff0000;
+}
+#runButton:hover {
+    color: #ffffff;
 }

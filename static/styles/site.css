@@ -4,6 +4,12 @@ body, html {
 
     /* From https://github.com/necolas/normalize.css/issues/665 */
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    overflow-x: hidden;
+}
+
+/* global fixes */
+button:hover {
+    cursor: pointer;
 }
 
 #content {
@@ -16,10 +22,11 @@ body, html {
 
 #header {
     width: 100%;
-    background-color: #333333;
+    background-color: #3694ff;
+    padding-left: 1.0em;
 }
 
-#header button {
+.headerButton {
 
     background-color: inherit;
     color: #ffffff;
@@ -28,27 +35,24 @@ body, html {
     /* Get rid of default styles */
     border: none;
     outline: none;
-    padding: 0.6em 0.6em;
-    font-size: 14pt;
+    padding: 0.8em 0.8em;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: inherit;
 
-    transition: 0.3s;
+    transition: 0.1s;
 
 }
-#header button:hover {
-    background-color: #cccccc;
-    color: #000000;
+.headerButton:hover {
+    color: #bbbbbb;
 }
 
-#headerLogo {
-    background-color: #4dc9ff;
-    width: 100%;
-}
-#headerLogo img {
+#header img {
     display: block;
-    width: 5%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 2.0em;
+    padding: 8px;
     image-rendering: crisp-edges;
+    float: left;
 }
 
 .textCenter {
