@@ -25,7 +25,7 @@ onmessage = (message) => postMessage(message.data.map(testCase => {
     } catch(error) {
         return {pass: false, error: error.message};
     }
-    return {pass: val === testCase.returnVal, actual: val};
+    return {pass: val === testCase.returnValue, actual: val};
 }));
 ${code}
     `;
