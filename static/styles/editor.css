@@ -21,7 +21,7 @@
 }
 
 #topEditorOuter {
-    flex-basis: 66.66%;
+    flex-basis: 60%;
 }
 
 #topEditor {
@@ -31,10 +31,15 @@
 }
 
 #bottomOutput {
-    flex-basis: 33.33%;
+    flex-basis: 40%;
+    overflow: auto;
 
     background-color: #000000;
     color: #ffffff;
+}
+
+#tabResults, #tabConsole {
+    min-height: min-content;
 }
 
 #selector {
