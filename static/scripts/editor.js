@@ -1,5 +1,7 @@
 const resultsTable = document.getElementById("resultsTable");
 const consoleArea = document.getElementById("consoleArea");
+const synErrorArea = document.getElementById("synErrorArea");
+
 const runButton = document.getElementById("runButton");
 
 const tabResults = document.getElementById("tabResults");
@@ -31,9 +33,13 @@ const showConsoleTab = function() {
     tabConsole.style.display = "block"; consoleButton.style.backgroundColor = "#888888";
 };
 
-const showResults = function(results) {
-
+const clear = function() {
+    synErrorArea.innerHTML = "";
+    consoleArea.innerHTML = "";
     resultsTable.innerHTML = "";
+};
+
+const showResults = function(results) {
 
     for(let rowNum = -1; rowNum < results.length; rowNum++) {
         let row = resultsTable.insertRow();
@@ -109,11 +115,14 @@ const run = function() {
         worker.postMessage(testCases);
     }, 200);
 
+    // Clear results
+    clear();
+
     // Update run button
     runButton.innerHTML = "Running...";
     runButton.disabled = true;
 
-    worker.onmessage = (message) => {
+    worker.addEventListener("message", (message) => {
         
         // Restore run button
         runButton.innerHTML = "&#9654; Run";
@@ -124,8 +133,19 @@ const run = function() {
         worker.terminate();
         showResults(message.data);
     
-    };
+    });
 
-    consoleArea.innerHTML = "console";
+    worker.addEventListener("error", (error) => {
+    
+        synErrorArea.innerHTML = "Fatal: " + error.message;
+
+        // Restore run button
+        runButton.innerHTML = "&#9654; Run";
+        runButton.disabled = false;
+
+        running = false;
+        worker.terminate();
+
+    });
 
 };

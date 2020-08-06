@@ -56,6 +56,12 @@
     display: none;
 }
 
+#consoleArea, #synErrorArea {
+    margin: 0;
+    padding-top: 0.3em;
+    padding-left: 0.3em;
+}
+
 #selector {
     display: inline-block;
     width: 100%;

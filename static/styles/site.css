@@ -33,7 +33,9 @@ button:hover {
     background-color: inherit;
     color: #ffffff;
     float: left;
-    
+
+    height: 3.0em;
+
     /* Get rid of default styles */
     border: none;
     outline: none;
