@@ -1,4 +1,5 @@
-let editor = CodeMirror(document.getElementById("topEditor"), {
+let DOMEditor = document.getElementById("topEditor");
+let editor = CodeMirror(DOMEditor, {
     mode: "javascript",
     theme: "material",
     lineNumbers: true,
