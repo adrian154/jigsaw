@@ -30,20 +30,24 @@
                     </div>
                     <div id="bottomOutput">
                         <div id="selector">
-                            <button class="headerButton" id="runButton">&#9654; Run</button>
+                            <button class="headerButton" id="runButton" onclick="run()">&#9654; Run</button>
                             <button class="headerButton">Results</button>
                             <button class="headerButton">Console</button>
                         </div>
-                        <div id="tabResults">
-
-                        </div>
-                        <div id="tabConsole">
-
-                        </div>
+                        <div id="tabResults"></div>
+                        <div id="tabConsole"></div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            // Challenge definition here is filled in dynamically.
+            // EXAMPLE:
+            let challengeName = "add";
+            let challengeID = 1000;
+            let challengeTestCasesJSON = "[{\"params\":[5,10],\"returnValue\":15},{\"params\":[-2,8],\"returnValue\":6},{\"params\":[-1,-2],\"returnValue\":-3},{\"params\":[17,38],\"returnValue\":55},{\"params\":[0,0],\"returnValue\":0}]";
+       </script>
 
         <script src="/static/scripts/editor.js"></script>
 
