@@ -15,12 +15,14 @@
 
 #rightPane {
     flex-basis: 77%;
+
     display: flex;
     flex-direction: column;
 }
 
 #topEditor {
     flex-basis: 66.66%;
+    overflow: auto;
 }
 
 #bottomOutput {
