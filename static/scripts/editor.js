@@ -16,7 +16,8 @@ const editor = CodeMirror(DOMEditor, {
 let testCases = JSON.parse(challengeTestCasesJSON);
 
 const showResults = function(results) {
-    console.log(results);
+
+    resultsTable.innerHTML = "";
 
     for(let rowNum = -1; rowNum < results.length; rowNum++) {
         let row = resultsTable.insertRow();
