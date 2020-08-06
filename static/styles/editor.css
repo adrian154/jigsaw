@@ -22,7 +22,6 @@
 
 #topEditor {
     flex-basis: 66.66%;
-    overflow: auto;
 }
 
 #bottomOutput {
