@@ -50,35 +50,6 @@
 }
 
 #profilePuzzles {
-    display: flex;
+    display: block;
 }
 
-#profilePuzzleCard {
-    border: 2px solid #ddd;
-    width: 25%;
-    margin: 1%;
-    padding: 2%;
-    background-color: white;
-    border-radius: 4px;
-}
-
-#profilePuzzleCard button {
-    /* margin: auto;
-    width: 100%;
-    background-color: #3694ff;
-    border: none;
-    padding: 4%;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white; */
-    position: absolute;
-    bottom: 0;
-}
-
-#profilePuzzleCard button:hover {
-    background-color: #6db1ff;
-}
-
-#profilePuzzleCard button:active {
-    border: 0px;
-}
