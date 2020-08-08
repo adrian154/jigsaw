@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="/static/styles/site.css">
         <link rel="stylesheet" href="/static/styles/dashboard.css">
+        <link rel="stylesheet" href="/static/styles/card.css">
     </head>
     <body>
         
@@ -42,26 +43,42 @@
             <div id="profileContent">
                 <h2>Puzzles</h2>
                 <div id="profilePuzzles">
-                    <div id="profilePuzzleCard">
-                        <h3 id="profilePuzzleCardName">makePastrami</h3>
-                        <p id="profilePuzzleCardDesc">I haven’t seen a ton of great examples of making maps with perlin noise in python. So here we go!
-                            Perlin noise is a mathematical formula used to generate ‘realistic’ structures. It’s noise but unlike regular noise it has some coherent structure. Here is regular noise vs. Perlin noise:
-                            </p>
-                        <button id="goToPuzzleButton">Go to Puzzle</button>
-                    </div>
-                    <div id="profilePuzzleCard">
-                        <h3 id="profilePuzzleCardName">makePastrami</h3>
-                        <p id="profilePuzzleCardDesc">I haven’t seen a ton of great es a mathematical formula used to generate ‘realistic’ structures. It’s noise but unlike regular noise it has some coherent structure. Here is regular noise vs. Perlin noise:
-                            </p>
-                        <button id="goToPuzzleButton">Go to Puzzle</button>
-                    </div>
-                    <div id="profilePuzzleCard">
-                        <h3 id="profilePuzzleCardName">makePastrami</h3>
-                        <p id="profilePuzzleCardDesc">I haven’t seen a ton of great examples of making maps with perlin noise in python. So here we go!
-                            Perlin noise is a mathematical formula used to generate ‘realistic’ structures. It’s noise but unlike regular noise it has some coherent structure. Here is regular noise vs. Perlin noise:
-                            </p>
-                        <button id="goToPuzzleButton">Go to Puzzle</button>
-                    </div>
+
+                    <table>
+                        <td>
+                            <div class="card">
+                                <h3>makePastrami</h3>
+                                <p>Now let’s kick off some styles by arranging each of these items in a grid. 
+
+                                    Note: if this is your first foray into “Grid” you may want to get up to speed by reading the initial tutorials in Understanding CSS Grid Layout.
+                                    
+                                    We’ll go mobile first here, so the first styles will give our wrapper a width and center it, then set some Grid rules:
+                                </p>
+                                <button>Go to Puzzle</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card">
+                                <h3>makePastrami</h3>
+                                <p>Now let’s kick off some styles by arranging each of these items in a grid. 
+
+                                    Note: if this is your first foray into “Grid” you may want to get up to speed by reading the initial tutorials in Understanding CSS Grid Layout.
+                                    
+                                    We’ll go mobile first here, so the first styles will give our wrapper a width and center it, then set some Grid rules:
+                                </p>
+                                <button>Go to Puzzle</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card">
+                                <h3>makePastrami</h3>
+                                <p>Now let’s kick off some styles by arranging each of these items in a grid. 
+                                 first styles will give our wrapper a width and center it, then set some Grid rules:
+                                </p>
+                                <button>Go to Puzzle</button>
+                            </div>
+                        </td>
+                    </table>
                 </div>
             </div>
         <!-- Fix Chrome bug where transitions are triggered on page load -->
