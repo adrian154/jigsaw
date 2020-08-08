@@ -1,10 +1,11 @@
 const Template = require("./template.js");
 
-module.exports = function(target) {
+module.exports = function() {
     return new Template(
         "Redirect...",
         [],
-        function() {
+        [],
+        function(target) {
             return `<script>window.location.href = "${target}";</script>`;
         }
     );

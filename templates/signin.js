@@ -4,6 +4,7 @@ module.exports = function() {
     return new Template(
         "Sign In",
         ["/static/styles/signin.css"],
+        []
         function() {
             return `
 <div id="signInContainer">
