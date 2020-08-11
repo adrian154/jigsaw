@@ -7,12 +7,13 @@
 #profilePicture {
     width: 256px;
     height: 256px;
-    float: left;
     margin-right: 5%;
+    margin-bottom: 10%;
 }
 
 #profileInfo {
     width: 100%;
+    margin-left: 5%;
 }
 
 #profileUsername {
@@ -51,5 +52,21 @@
 
 #profilePuzzles {
     display: block;
+}
+
+#progressBarContainer {
+    margin-top: 1%;
+    margin-bottom: 5%;
+    width: 100%;
+    background-color: #ddd;
+    height: 0.5em;
+    border-radius: 10px;
+}
+
+#progressBarProgress {
+    width: 50%;
+    background-color: #3694ff;
+    height: 0.5em;
+    border-radius: 10px;
 }
 

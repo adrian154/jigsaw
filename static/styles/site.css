@@ -62,3 +62,8 @@ button:hover {
 .textCenter {
     text-align: center;
 }
+
+.badge {
+    width: 100px;
+    height: 100px;
+}
