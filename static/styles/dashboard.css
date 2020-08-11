@@ -42,6 +42,7 @@
 
 #profileLevel {
     color: #999;
+    margin-bottom: 6%;
 }
 
 #profileContent {
@@ -68,5 +69,21 @@
     background-color: #3694ff;
     height: 0.5em;
     border-radius: 10px;
+}
+
+#followButton {
+    margin: auto;
+    width: 100%;
+    background-color: #3694ff;
+    border: none;
+    padding: 4%;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    position: relative;
+}
+
+#followButton:hover {
+    background-color: #6db1ff;
 }
 

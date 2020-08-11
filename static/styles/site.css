@@ -7,6 +7,19 @@ body, html {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    width: 0.7em;
+}
+   
+body::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+   
+body::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+}
+
 /* global fixes */
 button:hover {
     cursor: pointer;
@@ -26,6 +39,7 @@ button:hover {
     width: 100%;
     background-color: #3694ff;
     padding-left: 1.0em;
+    position: fixed;
 }
 
 .headerButton {
@@ -66,4 +80,9 @@ button:hover {
 .badge {
     width: 100px;
     height: 100px;
+}
+
+button {
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

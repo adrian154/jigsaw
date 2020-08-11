@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles/site.css">
+        <link rel="stylesheet" href="/static/styles/home.css">
+        <link rel="stylesheet" href="/static/styles/card.css">
+    </head>
+    <body>
+
+        <div id="content">
+            <div id="header">
+                <img src="/static/images/logo_light_on_dark.png">
+                <button class="headerButton">Home</button>
+                <button class="headerButton">Other</button>
+                <button class="headerButton">Stupid</button>
+            </div>
+
+            <div id="sidebar">
+
+                <div id="searchContainer">
+                    <h2>Search</h2>
+                    <input type="text" name="" id="searchBar" placeholder="Search"> <br>
+                </div>
+
+                <div id="filterContainer">
+                    <h2>Filter</h2>
+                    <br>
+                    <h3>Filter by Popularity</h3>
+                    <div id="filterButtons">
+                        <button class="filterButton" id="filterHotButton" onclick="clickFilterButton(this.id)" style="background-color: #3694ff;">Hot</button>
+                        <button class="filterButton" id="filterNewButton" onclick="clickFilterButton(this.id)">New</button>
+                        <button class="filterButton" id="filterRecommendedButton" onclick="clickFilterButton(this.id)">Explore</button>
+                    </div>
+                    <script>
+                        function clickFilterButton(buttonName) {
+                            let buttons = ["filterHotButton", "filterNewButton", "filterRecommendedButton"]
+                            for(let button of buttons) {
+                                if(button == buttonName) {
+                                    document.getElementById(button).style.backgroundColor = "#3694ff"
+                                } else {
+                                    document.getElementById(button).style.backgroundColor = "#111"
+                                }
+                            }
+                        }
+                    </script>
+                    <br>
+                    <h3>Filter by Tags</h3>
+                    <div id="filterTags">
+                        <div id="filterTag"><span>Marki</span> <input type="checkbox" name="" id=""> </div>
+                        <div id="filterTag"><span>jack</span> <input type="checkbox" name="" id=""> </div>
+                        <div id="filterTag"><span>pewdie</span> <input type="checkbox" name="" id=""> </div>
+                        <div id="filterTag"><span>Dinosaur</span> <input type="checkbox" name="" id=""> </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+
+        <!-- Fix Chrome bug where transitions are triggered on page load -->
+        <script> </script>
+
+    </body>
+</html>
