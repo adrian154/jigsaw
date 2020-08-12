@@ -1,9 +1,10 @@
-#sidebar {
+#sidebarContents {
     background-color: #f0f0f0;
-    width: 22%;
+    width: 250px;
     float: left;
-    padding: 2.5%;
-    padding-top: 6%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 40px;
     height: 100%;
 }
 
@@ -37,10 +38,28 @@ input {
 }
 
 #filterTags input {
-    width: 60%;
-    float: right;
+    width: 10%;
+    vertical-align: middle;
+    margin-top: 0px;
 }
 
 #filterTag {
-    border: 1px solid black;
+    padding: 2%;
+}
+
+#closeSidebarButton {
+    height: 105%;
+    border: none;
+    background-color: #eee;
+    color: #111;
+    font-weight: bold;
+    font-size: large;
+}
+
+#closeSidebarButton:hover {
+    background-color: #ddd;
+}
+
+#sidebar {
+    height: 100%;
 }
