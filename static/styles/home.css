@@ -4,8 +4,7 @@
     float: left;
     padding-left: 30px;
     padding-right: 30px;
-    margin-top: 40px;
-    height: 100%;
+    height: 102.5%;
 }
 
 input {
@@ -48,7 +47,7 @@ input {
 }
 
 #closeSidebarButton {
-    height: 105%;
+    height: 102.5%;
     border: none;
     background-color: #eee;
     color: #111;
@@ -62,4 +61,13 @@ input {
 
 #sidebar {
     height: 100%;
+    display: inline;
+    width: 50%;
+    margin-top: 3em;
+}
+
+#homeContent {
+    display: inline;
+    width: 50%;
+    margin: auto;
 }
