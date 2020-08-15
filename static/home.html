@@ -14,19 +14,15 @@
                 <button class="headerButton">Stupid</button>
             </div>
 
-            <div id="main">
-                <div id="sidebar">
-                    <h2>Search</h2>
-                    <input type="text" name="" id="searchBar" placeholder="Search"> <br>
+            <div id="pageContainer">
 
-                    <div id="filterContainer">
-                        <h2>Filter</h2>
-                        <br>
-                        <h3>Filter by Popularity</h3>
-                        <div id="filterButtons">
-                            <button class="filterButton" id="filterHotButton" onclick="clickFilterButton(this.id)" style="background-color: #3694ff;">Hot</button>
-                            <button class="filterButton" id="filterNewButton" onclick="clickFilterButton(this.id)">New</button>
-                            <button class="filterButton" id="filterRecommendedButton" onclick="clickFilterButton(this.id)">Explore</button>
+                <div id="sidebar">
+
+                    <div id="sidebarContents">
+    
+                        <div id="searchContainer">
+                            <h2>Search</h2>
+                            <input type="text" name="" id="searchBar" placeholder="Search"> <br>
                         </div>
     
                         <div id="filterContainer">
@@ -60,41 +56,58 @@
                         </div>
     
                     </div>
+    
+                    <button id="closeSidebarButton" onclick="toggleSidebar()"><<</button>
+                    <script>
+                        let sidebarPresent = true
+                        function toggleSidebar() {
+                            sidebarPresent = !sidebarPresent
+                            if(sidebarPresent) {
+                                document.getElementById("sidebarContents").style.display = "none"
+                                document.getElementById("closeSidebarButton").innerHTML = ">>"
+                            } else {
+                                document.getElementById("sidebarContents").style.display = "block"
+                                document.getElementById("closeSidebarButton").innerHTML = "<<"
+                            }
+                        }
+                    </script>
                 </div>
-
-                <div id="closeButton">
-                    <button id="closeSidebarButton" onclick="toggleSidebar()">&lt;&lt;</button>
-                </div>
-
+    
                 <div id="homeContent">
+<<<<<<< HEAD
                     
                     <div id="homeChallenge">
                         <h2>doMasthi</h2>
                         <p></p>
                     </div>
 
+=======
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+>>>>>>> parent of e4a2ce4... Merge branch 'master' of https://github.com/adrian154/jigsaw
                 </div>
 
-                <script>
-                    let sidebarPresent = true
-                    function toggleSidebar() {
-                        sidebarPresent = !sidebarPresent
-                        if(sidebarPresent) {
-                            document.getElementById("sidebarContents").style.display = "none"
-                            document.getElementById("closeSidebarButton").innerHTML = ">>"
-                        } else {
-                            document.getElementById("sidebarContents").style.display = "block"
-                            document.getElementById("closeSidebarButton").innerHTML = "<<"
-                        }
-                    }
-                </script>
             </div>
+
+            
+
         </div>
+        
+        
 
-    </body>
-
-    <!-- Fix Chrome bug where transitions are triggered on page load -->
-    <script> </script>
+        <!-- Fix Chrome bug where transitions are triggered on page load -->
+        <script> </script>
 
     </body>
 </html>
