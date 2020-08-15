@@ -14,79 +14,84 @@
                 <button class="headerButton">Stupid</button>
             </div>
 
-            <div id="sidebar">
+            <div id="pageContainer">
 
-                <div id="sidebarContents">
+                <div id="sidebar">
 
-                    <div id="searchContainer">
-                        <h2>Search</h2>
-                        <input type="text" name="" id="searchBar" placeholder="Search"> <br>
-                    </div>
-
-                    <div id="filterContainer">
-                        <h2>Filter</h2>
-                        <br>
-                        <h3>Filter by Popularity</h3>
-                        <div id="filterButtons">
-                            <button class="filterButton" id="filterHotButton" onclick="clickFilterButton(this.id)" style="background-color: #3694ff;">Hot</button>
-                            <button class="filterButton" id="filterNewButton" onclick="clickFilterButton(this.id)">New</button>
-                            <button class="filterButton" id="filterRecommendedButton" onclick="clickFilterButton(this.id)">Explore</button>
+                    <div id="sidebarContents">
+    
+                        <div id="searchContainer">
+                            <h2>Search</h2>
+                            <input type="text" name="" id="searchBar" placeholder="Search"> <br>
                         </div>
-                        <script>
-                            function clickFilterButton(buttonName) {
-                                let buttons = ["filterHotButton", "filterNewButton", "filterRecommendedButton"]
-                                for(let button of buttons) {
-                                    if(button == buttonName) {
-                                        document.getElementById(button).style.backgroundColor = "#3694ff"
-                                    } else {
-                                        document.getElementById(button).style.backgroundColor = "#111"
+    
+                        <div id="filterContainer">
+                            <h2>Filter</h2>
+                            <br>
+                            <h3>Filter by Popularity</h3>
+                            <div id="filterButtons">
+                                <button class="filterButton" id="filterHotButton" onclick="clickFilterButton(this.id)" style="background-color: #3694ff;">Hot</button>
+                                <button class="filterButton" id="filterNewButton" onclick="clickFilterButton(this.id)">New</button>
+                                <button class="filterButton" id="filterRecommendedButton" onclick="clickFilterButton(this.id)">Explore</button>
+                            </div>
+                            <script>
+                                function clickFilterButton(buttonName) {
+                                    let buttons = ["filterHotButton", "filterNewButton", "filterRecommendedButton"]
+                                    for(let button of buttons) {
+                                        if(button == buttonName) {
+                                            document.getElementById(button).style.backgroundColor = "#3694ff"
+                                        } else {
+                                            document.getElementById(button).style.backgroundColor = "#111"
+                                        }
                                     }
                                 }
-                            }
-                        </script>
-                        <br>
-                        <h3>Filter by Tags</h3>
-                        <div id="filterTags">
-                            <div id="filterTag"> <input type="checkbox" name="" id=""> <span>markipliers</span></div>
-                            <div id="filterTag"> <input type="checkbox" name="" id=""> <span>jack</span></div>
-                            <div id="filterTag"> <input type="checkbox" name="" id=""> <span>pewdie</span></div>
+                            </script>
+                            <br>
+                            <h3>Filter by Tags</h3>
+                            <div id="filterTags">
+                                <div id="filterTag"> <input type="checkbox" name="" id=""> <span>markipliers</span></div>
+                                <div id="filterTag"> <input type="checkbox" name="" id=""> <span>jack</span></div>
+                                <div id="filterTag"> <input type="checkbox" name="" id=""> <span>pewdie</span></div>
+                            </div>
                         </div>
+    
                     </div>
-
+    
+                    <button id="closeSidebarButton" onclick="toggleSidebar()"><<</button>
+                    <script>
+                        let sidebarPresent = true
+                        function toggleSidebar() {
+                            sidebarPresent = !sidebarPresent
+                            if(sidebarPresent) {
+                                document.getElementById("sidebarContents").style.display = "none"
+                                document.getElementById("closeSidebarButton").innerHTML = ">>"
+                            } else {
+                                document.getElementById("sidebarContents").style.display = "block"
+                                document.getElementById("closeSidebarButton").innerHTML = "<<"
+                            }
+                        }
+                    </script>
+                </div>
+    
+                <div id="homeContent">
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
+                    this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
                 </div>
 
-                <button id="closeSidebarButton" onclick="toggleSidebar()"><<</button>
-                <script>
-                    let sidebarPresent = true
-                    function toggleSidebar() {
-                        sidebarPresent = !sidebarPresent
-                        if(sidebarPresent) {
-                            document.getElementById("sidebarContents").style.display = "none"
-                            document.getElementById("closeSidebarButton").innerHTML = ">>"
-                        } else {
-                            document.getElementById("sidebarContents").style.display = "block"
-                            document.getElementById("closeSidebarButton").innerHTML = "<<"
-                        }
-                    }
-                </script>
             </div>
 
-            <div id="homeContent">
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                this is where the home stuff goes please fix this and move it to the right side i beg this is torture please
-                
-            </div>
+            
 
         </div>
         

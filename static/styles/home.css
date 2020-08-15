@@ -64,12 +64,22 @@ input {
     display: inline-flex;
     width: 17%;
     margin-top: 3em;
+    float: left;
+}
+
+#pageContainer{
+    justify-content: space-between;
+    display: flex;
+    height: 100%;
 }
 
 #homeContent {
     display: inline-flexbox;
-    width: 50%;
-    margin: auto;
-    align-content: center;
-    border: solid 3px black;
+    width: 100%;
+    margin-top: 80px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: ;
+    border: solid 3px red;
 }
