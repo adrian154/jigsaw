@@ -1,10 +1,6 @@
 #sidebarContents {
     background-color: #f0f0f0;
-<<<<<<< HEAD
-    width: 200px;
-=======
     width: 250px;
->>>>>>> parent of e4a2ce4... Merge branch 'master' of https://github.com/adrian154/jigsaw
     float: left;
     padding-left: 30px;
     padding-right: 30px;
@@ -66,10 +62,7 @@ input {
 #sidebar {
     height: 100%;
     display: inline-flex;
-<<<<<<< HEAD
-=======
-    width: 17%;
->>>>>>> parent of e4a2ce4... Merge branch 'master' of https://github.com/adrian154/jigsaw
+    flex-basis: 17%;
     margin-top: 3em;
     float: left;
 }
