@@ -58,6 +58,19 @@
                     </div>
     
                     <button id="closeSidebarButton" onclick="toggleSidebar()">&lt;&lt;</button>
+                    <script>
+                        let sidebarPresent = true
+                        function toggleSidebar() {
+                            sidebarPresent = !sidebarPresent
+                            if(sidebarPresent) {
+                                document.getElementById("sidebarContents").style.display = "none"
+                                document.getElementById("closeSidebarButton").innerHTML = ">>"
+                            } else {
+                                document.getElementById("sidebarContents").style.display = "block"
+                                document.getElementById("closeSidebarButton").innerHTML = "<<"
+                            }
+                        }
+                    </script>
                 </div>
     
                 <div id="homeContent">
