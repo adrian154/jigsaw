@@ -28,25 +28,37 @@
                             <button class="filterButton" id="filterNewButton" onclick="clickFilterButton(this.id)">New</button>
                             <button class="filterButton" id="filterRecommendedButton" onclick="clickFilterButton(this.id)">Explore</button>
                         </div>
-                        <script>
-                            function clickFilterButton(buttonName) {
-                                let buttons = ["filterHotButton", "filterNewButton", "filterRecommendedButton"]
-                                for(let button of buttons) {
-                                    if(button == buttonName) {
-                                        document.getElementById(button).style.backgroundColor = "#3694ff"
-                                    } else {
-                                        document.getElementById(button).style.backgroundColor = "#111"
+    
+                        <div id="filterContainer">
+                            <h2>Filter</h2>
+                            <br>
+                            <h3>Filter by Popularity</h3>
+                            <div id="filterButtons">
+                                <button class="filterButton" id="filterHotButton" onclick="clickFilterButton(this.id)" style="background-color: #3694ff;">Hot</button>
+                                <button class="filterButton" id="filterNewButton" onclick="clickFilterButton(this.id)">New</button>
+                                <button class="filterButton" id="filterRecommendedButton" onclick="clickFilterButton(this.id)">Explore</button>
+                            </div>
+                            <script>
+                                function clickFilterButton(buttonName) {
+                                    let buttons = ["filterHotButton", "filterNewButton", "filterRecommendedButton"]
+                                    for(let button of buttons) {
+                                        if(button == buttonName) {
+                                            document.getElementById(button).style.backgroundColor = "#3694ff"
+                                        } else {
+                                            document.getElementById(button).style.backgroundColor = "#111"
+                                        }
                                     }
                                 }
-                            }
-                        </script>
-                        <br>
-                        <h3>Filter by Tags</h3>
-                        <div id="filterTags">
-                            <div id="filterTag"> <input type="checkbox" name="" id=""> <span>markipliers</span></div>
-                            <div id="filterTag"> <input type="checkbox" name="" id=""> <span>jack</span></div>
-                            <div id="filterTag"> <input type="checkbox" name="" id=""> <span>pewdie</span></div>
+                            </script>
+                            <br>
+                            <h3>Filter by Tags</h3>
+                            <div id="filterTags">
+                                <div id="filterTag"> <input type="checkbox" name="" id=""> <span>markipliers</span></div>
+                                <div id="filterTag"> <input type="checkbox" name="" id=""> <span>jack</span></div>
+                                <div id="filterTag"> <input type="checkbox" name="" id=""> <span>pewdie</span></div>
+                            </div>
                         </div>
+    
                     </div>
                 </div>
 
