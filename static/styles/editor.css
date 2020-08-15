@@ -1,6 +1,7 @@
 #editorArea {
     width: 100%;
     flex-grow: 1;
+    margin-top: 3em;
 
     display: flex;
     flex-direction: row;
