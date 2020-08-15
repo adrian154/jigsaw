@@ -74,7 +74,9 @@ input {
 }
 
 #homeContent {
-    display: inline;
+    display: inline-flexbox;
     width: 50%;
     margin: auto;
+    align-content: center;
+    border: solid 3px black;
 }
