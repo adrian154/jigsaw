@@ -49,7 +49,13 @@ module.exports = function() {
     this.app.get("/profiles/:userID", (req, res) => routeViewProfile(this, req, res));
 
     // Debug routes
-    this.app.get("/bogus", (req, res) => bogus.bogus = 42);
+    if(!config.PRODUCTION) {
+        this.app.get("/bogus", (req, res) => bogus.bogus = 42);
+        this.app.get("/debug", (req, res) => {
+            console.log(Object.entries(req.headers));
+            res.send(`<code>Headers: ${JSON.stringify(req.headers)}}</code>`);
+        });
+    }
 
     // Special 500 route (must be last)
     this.app.use((err, req, res, next) => {
