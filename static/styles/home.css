@@ -61,13 +61,15 @@ input {
 
 #sidebar {
     height: 100%;
-    display: inline;
-    width: 50%;
+    display: inline-flex;
+    width: 17%;
     margin-top: 3em;
 }
 
 #homeContent {
-    display: inline;
+    display: inline-flexbox;
     width: 50%;
     margin: auto;
+    align-content: center;
+    border: solid 3px black;
 }
