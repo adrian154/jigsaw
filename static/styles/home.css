@@ -1,6 +1,6 @@
 #sidebarContents {
     background-color: #f0f0f0;
-    width: 250px;
+    width: 200px;
     float: left;
     padding-left: 30px;
     padding-right: 30px;
@@ -62,7 +62,6 @@ input {
 #sidebar {
     height: 100%;
     display: inline-flex;
-    width: 17%;
     margin-top: 3em;
     float: left;
 }
@@ -74,12 +73,9 @@ input {
 }
 
 #homeContent {
-    display: inline-flexbox;
     width: 100%;
     margin-top: 80px;
     padding: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: ;
-    border: solid 3px red;
+    margin-left: 1%;
+    margin-right: 1%;
 }
