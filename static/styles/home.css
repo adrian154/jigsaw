@@ -1,10 +1,24 @@
-#sidebarContents {
-    background-color: #f0f0f0;
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.0em;
+    height: 100%;
+}
+
+#sidebar {
     width: 250px;
-    float: left;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 102.5%;
+    max-height: 100%;
+    background-color: #f0f0f0;
+    padding: 1.0em;
+}
+
+#closeButton {
+    width: 50px;
 }
 
 input {
@@ -47,7 +61,7 @@ input {
 }
 
 #closeSidebarButton {
-    height: 102.5%;
+    height: 100%;
     border: none;
     background-color: #eee;
     color: #111;
@@ -57,20 +71,6 @@ input {
 
 #closeSidebarButton:hover {
     background-color: #ddd;
-}
-
-#sidebar {
-    height: 100%;
-    display: inline-flex;
-    width: 17%;
-    margin-top: 3em;
-    float: left;
-}
-
-#pageContainer{
-    justify-content: space-between;
-    display: flex;
-    height: 100%;
 }
 
 #homeContent {
