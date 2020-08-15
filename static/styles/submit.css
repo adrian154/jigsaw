@@ -1,8 +1,8 @@
-#main{
-    display: flex;
-    flex-direction: column;
-}
 #submitContainer{
-    margin: 20%;
-    background-color: black;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    height: auto;
+    margin-inline: 12%;
+    background-color: #f0f0f0;
 }
