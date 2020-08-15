@@ -1,14 +1,14 @@
 #sidebarContents {
     background-color: #f0f0f0;
-<<<<<<< HEAD
-    width: 200px;
-=======
-    width: 250px;
->>>>>>> parent of e4a2ce4... Merge branch 'master' of https://github.com/adrian154/jigsaw
+    width: 220px;
     float: left;
     padding-left: 30px;
     padding-right: 30px;
     height: 102.5%;
+}
+
+body {
+    overflow: hidden;
 }
 
 input {
@@ -66,10 +66,6 @@ input {
 #sidebar {
     height: 100%;
     display: inline-flex;
-<<<<<<< HEAD
-=======
-    width: 17%;
->>>>>>> parent of e4a2ce4... Merge branch 'master' of https://github.com/adrian154/jigsaw
     margin-top: 3em;
     float: left;
 }
@@ -82,8 +78,64 @@ input {
 
 #homeContent {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 2em;
     padding: 20px;
     margin-left: 1%;
     margin-right: 1%;
+    overflow-y: scroll;
+}
+
+#homeChallenge {
+    border-bottom: 2px solid #eee;
+}
+
+#homeChallenge button {
+    width: 100%;
+    background-color: #3694ff;
+    border: none;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#homeChallenge button:hover {
+    background-color: #6db1ff;
+}
+
+#homeChallenge h2{
+    margin-bottom: 1%;
+}
+
+#puzzleInfo {
+    color: #999;
+    font-size: small;
+}
+
+#homeContent::-webkit-scrollbar {
+    width: 0.7em;
+}
+   
+#homeContent::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+   
+#homeContent::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+}
+
+#interest {
+    display: inline;
+    padding: 4px;
+    background-color: #eee;
+    margin: 0.5%;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    font-size: 0.85em;
 }
