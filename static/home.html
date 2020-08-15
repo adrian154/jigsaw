@@ -57,20 +57,7 @@
     
                     </div>
     
-                    <button id="closeSidebarButton" onclick="toggleSidebar()"><<</button>
-                    <script>
-                        let sidebarPresent = true
-                        function toggleSidebar() {
-                            sidebarPresent = !sidebarPresent
-                            if(sidebarPresent) {
-                                document.getElementById("sidebarContents").style.display = "none"
-                                document.getElementById("closeSidebarButton").innerHTML = ">>"
-                            } else {
-                                document.getElementById("sidebarContents").style.display = "block"
-                                document.getElementById("closeSidebarButton").innerHTML = "<<"
-                            }
-                        }
-                    </script>
+                    <button id="closeSidebarButton" onclick="toggleSidebar()">&lt;&lt;</button>
                 </div>
     
                 <div id="homeContent">
@@ -95,7 +82,16 @@
                         <span id="interest">brown</span>
                         <button>Go To Puzzle</button>
                     </div>
-
-                    
-
                 </div>
+            </div>
+
+            
+
+        </div>
+        
+        
+
+        <!-- Fix Chrome bug where transitions are triggered on page load -->
+        <script> </script>
+</body>
+
