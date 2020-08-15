@@ -14,14 +14,10 @@
                 <button class="headerButton">Stupid</button>
             </div>
 
-            <div id="sidebar">
-
-                <div id="sidebarContents">
-
-                    <div id="searchContainer">
-                        <h2>Search</h2>
-                        <input type="text" name="" id="searchBar" placeholder="Search"> <br>
-                    </div>
+            <div id="main">
+                <div id="sidebar">
+                    <h2>Search</h2>
+                    <input type="text" name="" id="searchBar" placeholder="Search"> <br>
 
                     <div id="filterContainer">
                         <h2>Filter</h2>
@@ -52,10 +48,16 @@
                             <div id="filterTag"> <input type="checkbox" name="" id=""> <span>pewdie</span></div>
                         </div>
                     </div>
-
                 </div>
 
-                <button id="closeSidebarButton" onclick="toggleSidebar()"><<</button>
+                <div id="closeButton">
+                    <button id="closeSidebarButton" onclick="toggleSidebar()">&lt;&lt;</button>
+                </div>
+
+                <div id="homeContent">
+                    this is where awesomeness happens
+                </div>
+
                 <script>
                     let sidebarPresent = true
                     function toggleSidebar() {
@@ -70,17 +72,12 @@
                     }
                 </script>
             </div>
-
-            <div id="homeContent">
-                this is where awesomeness happens
-            </div>
-
         </div>
-        
-        
 
-        <!-- Fix Chrome bug where transitions are triggered on page load -->
-        <script> </script>
+    </body>
+
+    <!-- Fix Chrome bug where transitions are triggered on page load -->
+    <script> </script>
 
     </body>
 </html>
