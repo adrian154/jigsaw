@@ -6,7 +6,7 @@ const sendSigninPage = function(res) {
 };
 
 const redirectToDashboard = function(res, user) {
-    res.send(tplRedirect("/dashboard").render());
+    res.send(tplRedirect().render("/dashboard"));
 };
 
 module.exports = function(app, req, res) {
