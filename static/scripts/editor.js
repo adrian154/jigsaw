@@ -111,7 +111,6 @@ const run = function() {
     // Run w/ test cases
     // Small delay, so the user feels like something actually happened
     setTimeout(function() {
-        console.log(testCases);
         worker.postMessage(testCases);
     }, 200);
 

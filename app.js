@@ -52,7 +52,6 @@ module.exports = function() {
     if(!config.PRODUCTION) {
         this.app.get("/bogus", (req, res) => bogus.bogus = 42);
         this.app.get("/debug", (req, res) => {
-            console.log(Object.entries(req.headers));
             res.send(`<code>Headers: ${JSON.stringify(req.headers)}}</code>`);
         });
     }

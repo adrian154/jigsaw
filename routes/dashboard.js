@@ -1,7 +1,7 @@
 const tplRedirect = require("../templates/redirect.js");
 
 const redirectSignin = function() {
-    res.send(tplRedirect("/signin").render());
+    res.send(tplRedirect().render("/signin"));
 };
 
 module.exports = function(app, req, res) {
@@ -25,8 +25,8 @@ module.exports = function(app, req, res) {
             redirectSignin();
             return;
         }
-
-        res.send(tplRedirect(`/profiles/${user.id}`).render());
+        s
+        res.send(tplRedirect().render(`/profiles/${user.id}`));
 
     } else {
         redirectSignin();
