@@ -21,7 +21,6 @@ DROP TABLE IF EXISTS votes;
 DROP TABLE IF EXISTS comments;
 
 CREATE TABLE users (
-    id INTEGER PRIMARY KEY UNIQUE,
     username TEXT,
     passwordHash TEXT,
     email TEXT,
