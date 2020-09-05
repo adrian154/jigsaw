@@ -5,6 +5,11 @@
 // model: object (keys are property names on class, values are column names)
 const ActiveRecordClassFactory = function(db, table, model) {
 
+    // Validate model
+    if(model.hasOwnProperty("id") || model.hasOwnProperty("recordIsDeleted")) {
+        throw new Error("Model has illegal property names.");
+    }
+
     let result = class {
 
         // you really should not use this constructor!
@@ -12,6 +17,7 @@ const ActiveRecordClassFactory = function(db, table, model) {
         constructor(id) {
             this.id = id;
             this.recordIsDeleted = false;
+            this.fetch();
         }
 
         // retrieve fields from database
@@ -21,7 +27,7 @@ const ActiveRecordClassFactory = function(db, table, model) {
                 throw new Error("Cannot fetch deleted record.");
             }
 
-            let data = db.prepare(`SELECT * FROM ${table} WHERE id = @id`).run({
+            let data = db.prepare(`SELECT * FROM ${table} WHERE rowid = @id`).get({
                 id: this.id
             });
 
@@ -29,7 +35,7 @@ const ActiveRecordClassFactory = function(db, table, model) {
                 if(!data.hasOwnProperty(columnName)) {
                     throw new Error(`Result set from database is missing column ${columnName}`);
                 }
-                this[propertyName] = columnName;
+                this[propertyName] = data[columnName];
             }
 
         }
@@ -41,9 +47,10 @@ const ActiveRecordClassFactory = function(db, table, model) {
                 throw new Error("Cannot save deleted record.");
             }
 
-            db.prepare(`UPDATE ${table} ${Object.values(model).map(columnName => {
-                `SET ${columnName} = ?`
-            }).join(" ")} WHERE rowid = ?`).run(
+            console.log(`UPDATE ${table} SET ${Object.values(model).map(columnName => `${columnName} = ?`).join(",")} WHERE rowid = ?`);
+            console.log(Object.keys(model).map(propertyName => this[propertyName]).concat(this.id));
+
+            db.prepare(`UPDATE ${table} SET ${Object.values(model).map(columnName => `${columnName} = ?`).join(",")} WHERE rowid = ?`).run(
                 Object.keys(model).map(propertyName => this[propertyName]).concat(this.id)
             );
 
@@ -95,28 +102,5 @@ const ActiveRecordClassFactory = function(db, table, model) {
     return result;
 
 };
-
-const sqlite = require("better-sqlite3");
-const config = require("./config.js");
-db = sqlite(config.DATABASE_FILE);
-
-const User = ActiveRecordClassFactory(db, "users", {
-    id: "id",
-    username: "username",
-    passwordHash: "passwordHash",
-    email: "email",
-    xp: "xp",
-    bio: "bio",
-    joinDate: "joinDate"
-});
-
-User.create({
-    username: "joe",
-    passwordHash: "dummy",
-    email: "joe@bob.com",
-    xp: 0,
-    bio: "hi guys",
-    joinDate: 50125
-})
 
 module.exports = ActiveRecordClassFactory;
