@@ -5,10 +5,6 @@ const sendSigninPage = function(res) {
     res.send(tplSignin().render());
 };
 
-const redirectToDashboard = function(res, user) {
-    res.send(tplRedirect().render("/dashboard"));
-};
-
 module.exports = function(app, req, res) {
 
     // Get user by cookie
@@ -36,9 +32,8 @@ module.exports = function(app, req, res) {
             return;
         }
 
-        // (The user isn't signed in)
-        redirectToDashboard(res, user);
-
+        res.redirect("/dashboard");
+        
     } else {
         sendSigninPage(res);
     }

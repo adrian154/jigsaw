@@ -57,3 +57,7 @@
 #signInButton:hover {
     background-color: #3d82cc
 }
+
+.text-centered {
+    text-align: center;
+}

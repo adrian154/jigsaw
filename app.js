@@ -8,6 +8,7 @@ const routeSignin = require("./routes/signin.js");
 const routeDashboard = require("./routes/dashboard.js");
 const routeViewChallenge = require("./routes/viewchallenge.js");
 const routeViewProfile = require("./routes/viewprofile.js");
+const routeRegister = require("./routes/register.js");
 
 // Local dependencies
 const config = require("./config.js");
@@ -47,6 +48,7 @@ module.exports = function() {
     this.app.get("/dashboard", (req, res) => routeDashboard(this, req, res));
     this.app.get("/challenges/:challengeID", (req, res) => routeViewChallenge(this, req, res));
     this.app.get("/profiles/:userID", (req, res) => routeViewProfile(this, req, res));
+    this.app.get("/register", (req, res) => routeRegister(this, req, res));
 
     // Debug routes
     if(!config.PRODUCTION) {
