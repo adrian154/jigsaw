@@ -95,3 +95,25 @@ table, td {
 td {
     padding: 12px;
 }
+
+.votingButton {
+    border-radius: 0px;
+    border: none;
+    background-color: white;
+    color: #aaa;
+    font-size: 1.8em;
+}
+
+
+
+
+#commentSection {
+    padding-left: 5%;
+}
+
+#commentPostTextArea {
+    width: 95%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1%;
+    font-size: 1em;
+}

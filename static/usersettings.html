@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles/site.css">
+        <link rel="stylesheet" href="/static/styles/usersettings.css">
+        <link rel="stylesheet" href="/static/styles/card.css">
+    </head>
+    <body>
+
+        <div id="content">
+            <div id="header">
+                <img src="/static/images/logo_light_on_dark.png">
+                <button class="headerButton">Home</button>
+                <button class="headerButton">Other</button>
+                <button class="headerButton">Stupid</button>
+            </div>
+
+            <div id="pageContainer">
+
+                <h1 style="text-align: center; margin-bottom: 1.5em;">User Settings</h1>
+
+                <div style="margin: auto; text-align: center;">
+                    <img src="https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9jcmVhdG9yLWltYWdlcy5wb2RjaGFzZXIuY29tL2U5MjlmMGE2YjcyMTJhMjA0YWViYWIyOWY5ZDEzZGU1LnBuZw%3D%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D" id="profilePicture">
+                </div>
+                <span id="usernameContainer">
+                    <h3>Username:
+                        <input type="text" id="editUsernameInput" value="jobe_iden">
+                    </h3>
+                </span>
+                <span id="passwordContainer">
+                    <h3>Password:
+                        <input type="password" id="editPasswordInput" value="sup3rc001p@ssword"> 
+                        <button id="showPasswordButton" onclick="togglePasswordShow(this)">Show</button>
+                    </h3>
+                </span>
+
+                <button id="saveChangesButton">Save Changes</button>
+
+
+            </div>
+
+                
+
+            
+
+        </div>
+        
+        <script>
+            function togglePasswordShow(e) {
+                if( e.innerHTML == 'Show' ) {
+                    e.innerHTML = 'Hide'
+                    document.getElementById('editPasswordInput').type="text";
+                } else {
+                    e.innerHTML = 'Show'
+                    document.getElementById('editPasswordInput').type="password";
+                }
+            }
+        </script>
+
+        <!-- Fix Chrome bug where transitions are triggered on page load -->
+        <script> </script>
+</body>
+

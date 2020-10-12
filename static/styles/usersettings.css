@@ -1,0 +1,57 @@
+#pageContainer {
+    margin: auto;
+    width: 70%;
+}
+
+#profilePicture {
+    text-align: center;
+    width: 256px;
+    height: 256px;
+    margin: auto;
+}
+
+#usernameContainer {
+    text-align: center;
+}
+
+#passwordContainer {
+    text-align: center;
+}
+
+#editUsernameInput {
+    margin-left: 1em;
+    padding: 0.2em;
+}
+
+#showPasswordButton {
+    margin: auto;
+    background-color: #3694ff;
+    border: none;
+    padding: 0.4em;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#showPasswordButton:hover {
+    background-color: #6db1ff;
+}
+
+#saveChangesButton {
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    background-color: #3694ff;
+    border: none;
+    padding: 2%;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    position: relative;
+    margin-top: 1.5em;
+}
+
+#saveChangesButton:hover {
+    background-color: #6db1ff;
+}
