@@ -3,21 +3,50 @@
         <link rel="stylesheet" href="/static/styles/submit.css">
         <link rel="stylesheet" href="/static/styles/site.css">
         <link rel="stylesheet" href="/static/styles/card.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/theme/material.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/addon/edit/matchbrackets.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/addon/edit/closebrackets.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/mode/javascript/javascript.min.js"></script>
     </head>
     <body>
-        <div id="main">
-            <div id="header">
-                <img src="/static/images/logo_light_on_dark.png">
-                <button class="headerButton">Home</button>
-                <button class="headerButton">Other</button>
-                <button class="headerButton">Stupid</button>
-            </div>
+        <div id="header">
+            <img src="/static/images/logo_light_on_dark.png">
+            <button class="headerButton">Home</button>
+            <button class="headerButton">Other</button>
+            <button class="headerButton">Stupid</button>
         </div>
 
         <div id="submitContainer">
-            <h1>lshdalkshdlkasd</h1>
-
+            <div id="totalContainer">
+                <div id="infoContainerContainer">
+                    <h1 id="submitTitle">Submit your problem</h1>
+                    <div id="totalTotalContainer">
+                        <div id="infoContainer">
+                            <div id="titleContainer">
+                                <h2>Title</h2>
+                                <input type="text" id="titleTextField"></input>              
+                            </div>
+                            <hr id="submitDivider">
+                            <div id="descContainer">
+                                <h2>Description</h2>
+                                <textarea id="descTextField"></textarea>
+                            </div>
+                        </div>
+                        <div id="ioContainer">
+                            <div id="inputContainer">
+                                <h2>Input/Output</h2>
+                                <p>(Add json data for input/output)</p>
+                                <div id="topEditor"></div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <script src="/static/scripts/editor.js"></script>
+        <script> </script>
     </body>
 </html>
