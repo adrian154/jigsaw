@@ -1,0 +1,21 @@
+body {
+    background-color: #f2f2f2;
+    font-family: system; /* Definitely not lazy design */
+    overflow-y: scroll; /* Content can be compressed by scrollbar, so let's have one ALL THE TIME! */
+    margin: 0;
+}
+
+#main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#toolbar {
+    flex: 3.0em;
+    background-color: #42bcf5;
+}
+
+#body-container {
+    background-color: #ffffff;
+}

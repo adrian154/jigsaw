@@ -1,0 +1,49 @@
+#center-column {
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form-outer {
+    margin-top: 5.0em;
+}
+
+#form-inner {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 2.0em;
+}
+
+form input[type=text], input[type=password] {
+    width: 95%;
+    font-family: inherit;
+    height: 2.0em;
+    border: 1px solid #aaaaaa;
+    border-radius: 2px;
+    padding: 1.0em 0.5em;
+}
+
+button {
+    width: 100%;
+    background-color: #37b846;
+    color: #ffffff;
+    margin-top: 1.5em;
+    padding: 0.75em;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:disabled {
+    background-color: #949494;
+    color: #d4d4d4;
+}
+
+.lightred {
+    background-color: #ff4040;
+}
+
+.lightblue {
+    background-color: #4040ff;
+}

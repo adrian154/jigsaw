@@ -14,8 +14,10 @@ class App {
         this.loadData();
        
         this.app = Express();
-        this.initMiddleware();
+        
         this.registerRoutes();
+        this.initMiddleware();
+        
         this.app.listen(80, () => {
             console.log("Web server started.");
         });
