@@ -1,6 +1,6 @@
 #pageContainer {
     margin: auto;
-    width: 70%;
+    width: 30%;
 }
 
 #profilePicture {
@@ -8,30 +8,46 @@
     width: 256px;
     height: 256px;
     margin: auto;
+    border-radius: 128px;
 }
 
 #usernameContainer {
-    text-align: center;
+    text-align: left;
 }
 
 #passwordContainer {
-    text-align: center;
+    text-align: left;
 }
 
-#editUsernameInput {
-    margin-left: 1em;
-    padding: 0.2em;
+#pageContainer input[type=text], input[type=password] {
+    
+    width: 100%;
+
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.8em;
+
+    font-size: 1.0em;
+    box-shadow: inset 0 1px 3px #dddddd;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+#editPasswordInput {
+    width: 80%;
 }
 
 #showPasswordButton {
-    margin: auto;
+    margin: 0px;
     background-color: #3694ff;
     border: none;
-    padding: 0.4em;
-    font-size: 12px;
+    padding: 0.8em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    width: 19%;
+    border-radius: 5px;
 }
 
 #showPasswordButton:hover {
@@ -39,12 +55,11 @@
 }
 
 #saveChangesButton {
-    margin-left: 30%;
-    margin-right: 30%;
-    width: 40%;
+    width: 100%;
     background-color: #3694ff;
     border: none;
-    padding: 2%;
+    padding: 2em;
+    border-radius: 5px;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;

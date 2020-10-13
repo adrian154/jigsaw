@@ -16,6 +16,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     position: relative;
+    border-radius: 5px;
 }
 
 .card button:hover {
