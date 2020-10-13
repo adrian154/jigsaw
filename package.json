@@ -1,8 +1,8 @@
 {
   "name": "jigsaw",
   "version": "1.0.0",
-  "description": "a website for jigsaws",
-  "main": "jigsaw.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,14 +11,12 @@
     "url": "git+https://github.com/adrian154/jigsaw.git"
   },
   "author": "",
-  "license": "GPL-3.0",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/adrian154/jigsaw/issues"
   },
   "homepage": "https://github.com/adrian154/jigsaw#readme",
   "dependencies": {
-    "better-sqlite3": "^7.1.0",
-    "cookie-parser": "^1.4.5",
     "express": "^4.17.1"
   }
 }
