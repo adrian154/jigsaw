@@ -40,6 +40,29 @@ module.exports = function() {
     this.app.use(express.json());
     this.app.use("/static", express.static("static"));
 
+    // Auth
+    this.app.use((req, res, next) => {
+
+        if(req.cookies.sesskey) {
+
+            let session = this.sessions.getSessionByKey(req.cookies.sesskey);
+            if(session) {
+
+                let user = this.users.getUserByID(session.ownerID);
+                if(user) {
+                    req.user = user;
+                } else {
+                    req.clearCookie("sesskey");
+                }
+
+            } else {
+                req.clearCookie("sesskey");
+            }
+
+        }
+
+    });
+
     // Add routes (POST)
     this.app.post("/auth", (req, res) => routeAuth(this, req, res));
     
